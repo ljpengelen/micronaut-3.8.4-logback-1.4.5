@@ -1,14 +1,6 @@
-## Micronaut 3.8.4 Documentation
+## Micronaut 3.8.4 v.s. Logback > 1.2.11
 
-- [User Guide](https://docs.micronaut.io/3.8.4/guide/index.html)
-- [API Reference](https://docs.micronaut.io/3.8.4/api/index.html)
-- [Configuration Reference](https://docs.micronaut.io/3.8.4/guide/configurationreference.html)
-- [Micronaut Guides](https://guides.micronaut.io/index.html)
----
+This is a minimal Micronaut project demonstrating that a Micronaut 3.8.4 application won't start when combined with Logback versions greater than 1.2.11.
 
-- [Shadow Gradle Plugin](https://plugins.gradle.org/plugin/com.github.johnrengelman.shadow)
-## Feature http-client documentation
-
-- [Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#httpClient)
-
-
+This is due to the fact that the class EnvUtil has been moved in version 1.3.0.
+See https://github.com/qos-ch/logback/tree/v_1.2.11/logback-classic/src/main/java/ch/qos/logback/classic/util and https://github.com/qos-ch/logback/tree/v_1.3.0/logback-core/src/main/java/ch/qos/logback/core/util.
